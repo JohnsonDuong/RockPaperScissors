@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function computerPlay() {
+        const randNum = Math.floor(Math.random() * 10); // creates a random integer from 1 to 9
+
+        if (randNum <= 3) {
+          return "rock";
+        } else if (randNum > 3 && randNum <= 6) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
+      }
+
+      function playRound(playerSelection, computerSelection) {
+        switch (playerSelection[0] + computerSelection[0]) {
+          case "rr":
+            return "Rock and Rock tie!";
+            break;
+          case "rp":
+            return "You lose! Paper beats Rock";
+            break;
+          case "rs":
+            return "You win! Rock beats Scissors";
+            break;
+          case "pr":
+            return "You win! Paper beats Rock";
+            break;
+          case "pp":
+            return "Paper and Paper tie!";
+            break;
+          case "ps":
+            return "You lose! Scissors beats Paper";
+            break;
+          case "sr":
+            return "You lose! Rock beats Scissors";
+            break;
+          case "sp":
+            return "You win! Scissors beats Paper";
+            break;
+          case "ss":
+            return "Scissors and Scissors tie!";
+            break;
+        }
+      }
+
+      const playerSelection = "rock";
+      const computerSelection = computerPlay();
+      console.log(playRound(playerSelection, computerSelection));
+    </script>
+  </body>
+</html>
