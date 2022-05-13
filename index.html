@@ -4,9 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <h1 id="header">Rock-Paper-Scissors</h1>
+    <p>Round</p>
+    <div class="container">
+      <div class="game-card">
+        <p>You</p>
+        <p class="score">Score: 0</p>
+        <div class="buttons">
+          <button class="player-button rock"></button>
+          <button class="player-button paper"></button>
+          <button class="player-button scissors"></button>
+        </div>
+      </div>
+      <div class="game-card">
+        <p>Opponent</p>
+        <p class="score">Score: 0</p>
+        <div class="buttons">
+          <button class="disabled rock"></button>
+          <button class="disabled paper"></button>
+          <button class="disabled scissors"></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">Website by: Johnson Duong</div>
+
     <script>
       function computerPlay() {
         const randNum = Math.floor(Math.random() * 10); // creates a random integer from 1 to 9
@@ -52,15 +88,15 @@
         }
       }
 
-      function game() {
-        for (let i = 0; i < 5; i++) {
-          const playerSelection = prompt();
-          const computerSelection = computerPlay();
-          console.log(playRound(playerSelection, computerSelection));
-        }
-      }
+      // function game() {
+      //   for (let i = 0; i < 5; i++) {
+      //     const playerSelection = prompt();
+      //     const computerSelection = computerPlay();
+      //     //console.log(playRound(playerSelection, computerSelection));
+      //   }
+      //}
 
-      game();
+      //game();
     </script>
   </body>
 </html>
