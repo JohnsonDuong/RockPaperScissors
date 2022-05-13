@@ -3,7 +3,6 @@
     color: white;
     margin: 0px;
     padding: 0px;
-    background: transparent;
   }
 
 body {
@@ -82,7 +81,11 @@ button.scissors {
 
 .player-button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.7), 0 17px 50px 0 rgba(0,0,0,0.7);
-    transform: scale(1.1);
+    transform: scale(0.9);
+}
+
+.selected{
+    background-color: #058ED9;
 }
 
 button.disabled {
