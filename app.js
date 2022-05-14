@@ -57,9 +57,10 @@ let roundCount = 1;
 let scorePlayer = scoreOpponent = 0;
 
 //show modal screen at the end of the game
-function endGame() {
+function endGame(outcome) {
     const modalContainer = document.querySelector('.modal-container');
     modalContainer.classList.add('show');
+    document.querySelector('.message').textContent = `You ${outcome}!`;
 
     document.getElementById('play-again').addEventListener('click', () => {
         modalContainer.classList.remove('show');
@@ -70,7 +71,6 @@ function endGame() {
         document.querySelector('#round').textContent = `Round ${roundCount}`;
         document.querySelector('.score-player').textContent = `Score: ${scorePlayer}`;
         document.querySelector('.score-opponent').textContent = `Score: ${scoreOpponent}`;
-
 
         //reset selection
         document.querySelector('.player-button.rock').classList.remove('selected');
@@ -117,9 +117,13 @@ function game() {
             roundCount += 1;
             document.querySelector('#round').textContent = `Round ${roundCount}`;
 
-            if (scorePlayer==5 || scoreOpponent == 5) {
-                endGame();
+            if (scorePlayer==5) {
+                endGame('won');
             }     
+
+            if (scoreOpponent==5) {
+                endGame('lost');
+            }
         });
     });
 }

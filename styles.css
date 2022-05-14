@@ -107,6 +107,7 @@ button.disabled {
 
 .modal-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #2f313781;
@@ -131,8 +132,9 @@ button.disabled {
     width: auto;
     height: auto;
     padding: 20px;
+    margin: 50px;
     cursor: pointer;
     border-radius: 15px;
     font-size: 28px;
-    background-color: #058ED9;
+    background-color: #2F3137;
 }
