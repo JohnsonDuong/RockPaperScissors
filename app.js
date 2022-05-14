@@ -128,4 +128,5 @@ function game() {
     });
 }
 
+//call the game to start
 game();
