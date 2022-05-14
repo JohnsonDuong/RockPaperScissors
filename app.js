@@ -56,8 +56,31 @@ function playRound(playerSelection, computerSelection) {
 let roundCount = 1;
 let scorePlayer = scoreOpponent = 0;
 
+//show modal screen at the end of the game
 function endGame() {
-    console.log("End");
+    const modalContainer = document.querySelector('.modal-container');
+    modalContainer.classList.add('show');
+
+    document.getElementById('play-again').addEventListener('click', () => {
+        modalContainer.classList.remove('show');
+        
+        //reset variables
+        roundCount = 0;
+        scorePlayer = scoreOpponent = 0;
+        document.querySelector('#round').textContent = `Round ${roundCount}`;
+        document.querySelector('.score-player').textContent = `Score: ${scorePlayer}`;
+        document.querySelector('.score-opponent').textContent = `Score: ${scoreOpponent}`;
+
+
+        //reset selection
+        document.querySelector('.player-button.rock').classList.remove('selected');
+        document.querySelector('.player-button.paper').classList.remove('selected');
+        document.querySelector('.player-button.scissors').classList.remove('selected');
+        document.querySelector('.disabled.rock').classList.remove('selected');
+        document.querySelector('.disabled.paper').classList.remove('selected');
+        document.querySelector('.disabled.scissors').classList.remove('selected');
+        
+    });
 }
 
 //control mechanics of the game

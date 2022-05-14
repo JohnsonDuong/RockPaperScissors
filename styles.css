@@ -56,7 +56,7 @@ p {
     padding: 20px 0px;
 }
 
-button {
+button{
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 130px;
@@ -79,8 +79,13 @@ button.scissors {
     background-image: url("/images/scissors.png");
 }
 
-.player-button:hover {
+.player-button:hover{
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.7), 0 17px 50px 0 rgba(0,0,0,0.7);
+    transform: scale(0.9);
+}
+
+#play-again:hover  {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.3), 0 17px 50px 0 rgba(0,0,0,0.3);
     transform: scale(0.9);
 }
 
@@ -98,4 +103,36 @@ button.disabled {
     font-weight: 400;
     padding: 10px;
     margin-top: 30px;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f313781;
+    background-blend-mode:overlay;
+    backdrop-filter: blur(2.5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#play-again {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 28px;
+    background-color: #058ED9;
 }
