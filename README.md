@@ -16,7 +16,7 @@
 
 <p align="center">
   
-<img src="https://github.com/johnsonduong/pixart/blob/main/images/pixart.png?raw=true" alt="Logo" >
+<img src="https://github.com/johnsonduong/rock-paper-scissors/blob/main/images/rockpaperscissors.png?raw=true" alt="Logo" >
 </p>                                                                                                                             
                                                                                                                                                       
 ## About The Project
