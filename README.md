@@ -5,11 +5,12 @@
   <br>Rock Paper Scissors
 </h1>
 <p align="center">
-    A simple game of rock paper scissors against a computer.
+    A simple game of rock paper scissors against a computer
     <br />
     </p>
 </p>
 <p align="center">
+<a href="https://johnsonduong.github.io/rock-paper-scissors/" target="_blank">Live Demo</a> •
   <a href="#about-the-project">About The Project</a> •
   <a href="#tech-stack">Tech Stack</a>
 </p>  
